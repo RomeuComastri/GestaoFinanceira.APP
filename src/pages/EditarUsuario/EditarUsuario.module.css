@@ -1,0 +1,150 @@
+.totalEditar {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.modal_containerEditarUsuario {
+    width: 30%;
+    margin-top: 8%;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: #545454;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalhoModalEditarUsuario {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin-top: 5%;
+}
+
+.grupoFormularioEditarUsuario {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.grupoFormularioEditarUsuario input,
+.grupoFormularioEditarUsuario select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+    color: #545454;
+    font-size: 15px;
+}
+
+.botaoFecharEditarUsuario {
+    width: 7%;
+    height: 6%;
+    font-size: 30px;
+    color: #f1f1f1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+}
+
+.botaoFecharEditarUsuario:hover {
+    color: #373737;
+    transform: scale(1.1);
+}
+
+.rodapeModalEditarUsuario {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.botaoCancelarEditarUsuario {
+    background-color: #a40000;
+    text-decoration: none;
+    width: 50%;
+    height: 36px;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.botaoCancelarEditarUsuario:hover {
+    background-color: #580000;
+    transform: scale(1.1);
+}
+
+.botaoSalvarEditarUsuario {
+    background-color: #00a455;
+    text-decoration: none;
+    width: 100%;
+    height: 36px;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.botaoSalvarEditarUsuario:hover {
+    background-color: #006d38;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 980px) {
+    body {
+        overflow: auto;
+    }
+
+    .modal_containerEditarUsuario {
+        width: 80%;
+    }
+
+    .totalEditar {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 7%;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 570px) {
+        .botaoCancelarEditarUsuario {
+            height: 4.5vh;
+        }
+
+        .botaoSalvarEditarUsuario {
+            height: 4.5vh;
+        }
+    }
+}

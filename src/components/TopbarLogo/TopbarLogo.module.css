@@ -1,0 +1,30 @@
+.topbar_conteudo {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #545454;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.topbar_logo {
+    display: flex;
+    align-items: center;
+}
+
+.topbar_logo img {
+    width: 200px;
+}
+
+
+@media screen and (max-width: 530px) {
+    .topbar_conteudo {
+        gap: 20px;
+        flex-direction: column;
+
+    }
+    
+    .topbar_logo img {
+        width: 250px;
+    }
+}

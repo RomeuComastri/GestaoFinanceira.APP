@@ -1,0 +1,142 @@
+.overlayModalEditar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal_containerEditar {
+    width: 30%;
+    background-color: #545454;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cabecalhoModalEditar {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.grupoFormularioEditar {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.grupoFormularioEditar input,
+.grupoFormularioEditar select {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+    color: #545454;
+    font-size: 15px;
+}
+
+.botaoFecharEditar {
+    width: 7%;
+    height: 6%;
+    font-size: 30px;
+    color: #f1f1f1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+    
+}
+
+.botaoFecharEditar:hover {
+    color: #373737;
+    transform: scale(1.1);
+}
+
+.rodapeModalEditar {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 15px;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.botaoCancelarEditar {
+    background-color: #a40000;
+    text-decoration: none;
+    width: 50%;
+    height: 6vh;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.botaoCancelarEditar:hover {
+    background-color: #580000;
+    transform: scale(1.1);
+}
+
+.botaoSalvarEditar {
+    background-color: #00a455;
+    text-decoration: none;
+    width: 50%;
+    height: 6vh;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+}
+
+.botaoSalvarEditar:hover {
+    background-color: #006d38;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 980px) {
+    .modal_containerEditar {
+        width: 80%;
+    }
+
+    @media screen and (max-width: 570px) {
+        .botaoCancelarEditar{
+            height: 4.5vh;
+        }
+        .botaoSalvarEditar{
+            height: 4.5vh;
+        }
+    }
+}

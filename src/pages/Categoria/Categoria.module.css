@@ -1,0 +1,213 @@
+body {
+    overflow: hidden;
+}
+
+.tituloCategoria {
+    display: flex;
+    justify-content: space-between;
+}
+
+.barraFiltro {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 300px;
+}
+
+.tabelaMensagemCategoria {
+    width: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.mensagemTipos {
+    font-size: 25px;
+    color: #f1f1f1;
+}
+
+.botaoAdicionar {
+    margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #00a455;
+    width: 300px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    font-weight: 800;
+    font-family: sans-serif;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botaoAdicionar:hover {
+    background-color: #006d38;
+    transform: scale(1.01);
+}
+
+.containerPrincipalTabelaCategoria {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container_tabelaCategoria {
+    width: 100%;
+    height: auto;
+    max-height: 445px;
+    margin-top: 2%;
+    overflow-y: auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da barra de rolagem */
+.container_tabelaCategoria::-webkit-scrollbar {
+    width: 10px;
+}
+
+/*Fundo da barra de rolagem */
+.container_tabelaCategoria::-webkit-scrollbar-track {
+    background: #545454;
+    border-radius: 0 10px 10px 0;
+}
+
+/* indicador de rolagem */
+.container_tabelaCategoria::-webkit-scrollbar-thumb {
+    background: #616161;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Cor ao passar o mouse */
+.container_tabelaCategoria::-webkit-scrollbar-thumb:hover {
+    background: #939292;
+}
+
+.tabelaCategoria {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela_cabecalhoCategoria {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #00a455;
+    color: white;
+}
+
+
+.tabela_cabecalhoCategoria th,
+td {
+    padding: 8px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.tabela_corpoCategoria {
+    background-color: #545454;
+}
+
+.tabela_corpoCategoria tr {
+    border: 1px solid #373737;
+}
+
+.tabela_corpoCategoria tr:hover {
+    transition: 0.3s;
+    background-color: #616161;
+}
+
+.tabela_corpoCategoria th {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.tabela_corpoCategoria tr {
+    background-color: #545454;
+}
+
+.tabela_corpoCategoria tr:hover {
+    background-color: #616161;
+}
+
+.editar,
+.deletar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #f1f1f1;
+    font-size: 20px;
+    transition: color 0.3s;
+    padding: 5px;
+    transition: color 0.3s, transform 0.3s ease-in-out;
+    background-color: inherit;
+}
+
+.editar:hover {
+    color: #373737;
+    background-color: #616161;
+    transform: scale(1.1);
+}
+
+.deletar:hover {
+    color: #a40000;
+    background-color: #616161;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 980px) {
+
+    body {
+        overflow: auto;
+    }
+
+    @media screen and (max-width: 654px) {
+
+        .tituloCategoria {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2%;
+        }
+
+        .barraFiltro {
+            width: 90%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            margin-left: 0;
+        }
+
+        .botaoAdicionar {
+            width: 90%;
+            margin-top: 2%;
+            margin-bottom: 2%;
+            margin-right: 0;
+        }
+
+        .containerPrincipalTabelaCategoria{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            margin-top: 2%;
+        }
+
+        .tabelaMensagemCategoria {
+            width: 90%;
+        }
+
+        .container_tabelaCategoria {
+            width: 100%;
+            height: auto;
+            max-height: 600px;
+            margin-bottom: 2%;
+        }
+    }
+}

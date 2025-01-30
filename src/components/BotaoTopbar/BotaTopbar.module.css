@@ -1,0 +1,25 @@
+.botao_topbar {
+    background-color: #00a455;
+    text-decoration: none;
+    width: 120px;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botao_topbar:hover {
+    background-color: #006d38;
+    transform: scale(1.1);
+}

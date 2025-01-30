@@ -1,0 +1,83 @@
+.login_fundo{
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_container {
+    width: 25%;
+    background-color: #545454;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 85%;
+}
+
+form input{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+h2{
+    margin-bottom: 40px;
+}
+
+.botao_cadastro{
+    background-color: #00a455;
+    width: 100%;
+    height: 35px;
+    border-radius: 10px;
+    color: #f1f1f1;
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease-in-out;
+    border: none;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.botao_cadastro:hover{
+    background-color: #006d38;
+    transform: scale(1.1);
+}
+
+img {
+    width: 40%;
+}
+
+.login_senha{
+   font-size: 12px;
+   text-align: center;
+}
+
+.login_link{
+    text-decoration: none;
+    color: #00a455;
+    transition: 0.3s;
+}
+
+.login_link:hover{
+    color: #006d38;
+}
+
+@media screen and (max-width: 1000px) {
+    .login_container{
+        width: 80%;
+    }
+}

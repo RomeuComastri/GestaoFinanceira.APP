@@ -237,8 +237,8 @@ td {
     align-items: center;
     width: 100%;
     
-    background-color: #545454;
-    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+    /* background-color: #545454;
+    box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1); */
     border-radius: 10px;
     height: 70%;
 }

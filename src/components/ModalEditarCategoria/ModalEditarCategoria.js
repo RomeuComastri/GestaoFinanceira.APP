@@ -86,9 +86,8 @@ const ModalEditarCategoria = ({ visivel, fecharModal, atualizarCategorias, categ
                         &times;
                     </button>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={style.formularioEditarCategoria}>
                     <div className={style.grupoFormularioEditar}>
-                        <label>Nome</label>
                         <input
                             type="text"
                             name="nome"

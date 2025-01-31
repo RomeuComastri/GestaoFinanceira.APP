@@ -91,9 +91,8 @@ const ModalAdicionarTransacao = ({ visivel, fecharModal, tipoTransacao, usuarioI
                         &times;
                     </button>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={style.formularioAdicionarTransacao}>
                     <div className={style.grupoFormulario}>
-                        <label>Valor</label>
                         <input
                             type="number"
                             name="valor"
@@ -104,7 +103,6 @@ const ModalAdicionarTransacao = ({ visivel, fecharModal, tipoTransacao, usuarioI
                         />
                     </div>
                     <div className={style.grupoFormulario}>
-                        <label>Descrição</label>
                         <input
                             type="text"
                             name="descricao"
@@ -115,7 +113,6 @@ const ModalAdicionarTransacao = ({ visivel, fecharModal, tipoTransacao, usuarioI
                         />
                     </div>
                     <div className={style.grupoFormulario}>
-                        <label>Data</label>
                         <input
                             type="date"
                             name="data"
@@ -125,7 +122,6 @@ const ModalAdicionarTransacao = ({ visivel, fecharModal, tipoTransacao, usuarioI
                         />
                     </div>
                     <div className={style.grupoFormulario}>
-                        <label>Categoria</label>
                         <select
                             name="categoriaId"
                             value={transacao.categoriaId}

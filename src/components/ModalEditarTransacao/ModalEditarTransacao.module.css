@@ -19,24 +19,37 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     border-radius: 15px;
     color: white;
     box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+    gap: 5px;
 }
 
 .cabecalhoModalEditar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 85%;
+    height: 70px;
 }
 
+.cabecalhoModalEditar h2 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.formularioEditarTransacao {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px
+}
 .grupoFormularioEditar {
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
-
 .grupoFormularioEditar input,
 .grupoFormularioEditar select {
     padding: 10px;
@@ -57,7 +70,7 @@
     border: none;
     cursor: pointer;
     transition: color 0.3s, transform 0.3s ease-in-out;
-    
+    margin-bottom: 40px;
 }
 
 .botaoFecharEditar:hover {

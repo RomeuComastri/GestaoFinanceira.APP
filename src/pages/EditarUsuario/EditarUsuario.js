@@ -33,16 +33,16 @@ export function EditarUsuario() {
     const handleSubmitSenha = async (e) => {
         e.preventDefault();
         if (isFormValidSenha()) {
-            try{
-            await UsuarioApi.alterarSenhaAsync(id, senha, senhaAntiga);
-            setMensagemAlerta(`Senha alterada com sucesso!`);
-            setTipoAlerta('success');
-            exibirAlerta(true);
-        }catch(error){
-            setMensagemAlerta(`Erro ao alterar senha: ${error.response.data}`);
-            setTipoAlerta('danger');
-            exibirAlerta(true);
-        }
+            try {
+                await UsuarioApi.alterarSenhaAsync(id, senha, senhaAntiga);
+                setMensagemAlerta(`Senha alterada com sucesso!`);
+                setTipoAlerta('success');
+                exibirAlerta(true);
+            } catch (error) {
+                setMensagemAlerta(`Erro ao alterar senha: ${error.response.data}`);
+                setTipoAlerta('danger');
+                exibirAlerta(true);
+            }
         } else {
             alert('Por favor,  preencha todos  os campos.');
         }
@@ -51,18 +51,18 @@ export function EditarUsuario() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (isFormValid()) {
-            try{
+            try {
                 console.log("AQuiiiiiiiiiiiiiiiiiiiiiii aapi")
-            await UsuarioApi.atualizarAsync(id, nome, email);
-            setMensagemAlerta(`Edição realizada com sucesso!`);
-            setTipoAlerta('success');
-            exibirAlerta(true);
-            }catch(error){
+                await UsuarioApi.atualizarAsync(id, nome, email);
+                setMensagemAlerta(`Edição realizada com sucesso!`);
+                setTipoAlerta('success');
+                exibirAlerta(true);
+            } catch (error) {
                 setMensagemAlerta(`Erro ao realizar edição: ${error.response.data}`);
                 setTipoAlerta('danger');
                 exibirAlerta(true);
             }
-            
+
         } else {
             alert('Por favor,  preencha todos  os campos.');
         }
@@ -107,9 +107,8 @@ export function EditarUsuario() {
                     <div className={style.cabecalhoModalEditarUsuario}>
                         <h2>Editar Usuário</h2>
                     </div>
-                    <form onSubmit={handleSubmit}>
+                    <form onSubmit={handleSubmit} className={style.formularioEditarUsuario}>
                         <div className={style.grupoFormularioEditarUsuario}>
-                            <label>Nome</label>
                             <input
                                 type="text"
                                 name="nome"
@@ -120,7 +119,6 @@ export function EditarUsuario() {
                             />
                         </div>
                         <div className={style.grupoFormularioEditarUsuario}>
-                            <label>Email</label>
                             <input
                                 type="email"
                                 name="email"
@@ -141,9 +139,8 @@ export function EditarUsuario() {
                     <div className={style.cabecalhoModalEditarUsuario}>
                         <h2>Alterar Senha</h2>
                     </div>
-                    <form onSubmit={handleSubmitSenha}>
+                    <form onSubmit={handleSubmitSenha} className={style.formularioEditarUsuario}>
                         <div className={style.grupoFormularioEditarUsuario}>
-                            <label>Senha Atual</label>
                             <input
                                 type="password"
                                 name="senha"
@@ -154,7 +151,6 @@ export function EditarUsuario() {
                             />
                         </div>
                         <div className={style.grupoFormularioEditarUsuario}>
-                            <label>Nova senha</label>
                             <input
                                 type="password"
                                 name="senha"
@@ -172,7 +168,6 @@ export function EditarUsuario() {
                     </form>
                 </div>
             </div>
-
         </TopbarPrincipal>
     )
 }

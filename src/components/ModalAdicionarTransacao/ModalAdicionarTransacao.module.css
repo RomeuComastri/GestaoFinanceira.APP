@@ -19,24 +19,38 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 10px;
     border-radius: 15px;
     color: white;
     box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+    gap: 5px;
 }
 
 .cabecalhoModal {
     display: flex;
     justify-content: space-between;
-    width: 85%;
     align-items: center;
-    margin-top: 5%;
+    width: 85%;
+    height: 70px;
+}
+
+.cabecalhoModal h2 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.formularioAdicionarTransacao {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px
 }
 
 .grupoFormulario {
     display: flex;
     flex-direction: column;
     gap: 3px;
+    width: 100%;
 }
 
 .grupoFormulario input,
@@ -59,7 +73,7 @@
     border: none;
     cursor: pointer;
     transition: color 0.3s, transform 0.3s ease-in-out;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 }
 
 .botaoFechar:hover {
@@ -134,10 +148,11 @@
     }
 
     @media screen and (max-width: 570px) {
-        .botaoCancelar{
+        .botaoCancelar {
             height: 4.5vh;
         }
-        .botaoSalvar{
+
+        .botaoSalvar {
             height: 4.5vh;
         }
     }

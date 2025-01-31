@@ -172,7 +172,7 @@ export function Transacao() {
                     </div>
                     <div>
                         <button onClick={handleClickFiltrar} className={style.filtro_tabela}>
-                            <div>
+                            <div className={style.fraseFiltro}>
                                 Filtrar transações
                             </div>
                             <div className={style.icone_filtro}>
@@ -274,7 +274,7 @@ export function Transacao() {
                                     &times;
                                 </button>
                             </div>
-                            <form onSubmit={handleSubmitFiltro}>
+                            <form onSubmit={handleSubmitFiltro}className={style.formularioFiltrarTrancao}>
                                 <div className={style.grupoFormularioFiltrarTrancao}>
                                     <label>Tipo</label>
                                     <select

@@ -44,7 +44,7 @@ const ModalDeletarCategoria = ({ visivel, fecharModal, categoriaId, atualizarCat
             />
             <div className={style.modal_containerDeletarCategoria}>
                 <div className={style.cabecalhoModalDeletarCategoria}>
-                    <h2>Deseja deletar a categoria?</h2>
+                    <h2>Deletar categoria</h2>
                     <button className={style.botaoFecharDeletarCategoria} onClick={fecharModal}>
                         &times;
                     </button>

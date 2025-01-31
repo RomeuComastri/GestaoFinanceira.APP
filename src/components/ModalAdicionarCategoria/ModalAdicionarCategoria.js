@@ -82,9 +82,8 @@ const ModalAdicionarCategoria = ({ visivel, fecharModal, usuarioId, atualizarCat
                         &times;
                     </button>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={style.formularioAdicionarCategoria}>
                     <div className={style.grupoFormulario}>
-                        <label>Nome</label>
                         <input
                             type="text"
                             name="nome"
@@ -95,7 +94,6 @@ const ModalAdicionarCategoria = ({ visivel, fecharModal, usuarioId, atualizarCat
                         />
                     </div>
                     <div className={style.grupoFormulario}>
-                        <label>Tipo</label>
                         <select
                             name="tipo"
                             value={categoria.tipo}

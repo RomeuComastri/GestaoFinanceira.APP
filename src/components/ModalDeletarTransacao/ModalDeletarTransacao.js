@@ -45,7 +45,7 @@ const ModalDeletarTransacao = ({ visivel, fecharModal, transacaoId, atualizarTra
             />
             <div className={style.modal_containerDeletar}>
                 <div className={style.cabecalhoModalDeletar}>
-                    <h2>Deseja deletar a transação?</h2>
+                    <h2>Deletar transação</h2>
                     <button className={style.botaoFecharDeletar} onClick={fecharModal}>
                         &times;
                     </button>

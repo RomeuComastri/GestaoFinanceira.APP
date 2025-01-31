@@ -81,25 +81,27 @@ export function RecuperarSenha() {
     }, []);
 
     return (
-        <div className={style.login_total}>
-            <TopbarLogo>
+        <TopbarLogo>
             <Alerta
-                    tipo={tipoAlerta}
-                    mensagem={mensagemAlerta}
-                    visivel={mostrarAlerta}
-                    aoFechar={() => setMostrarAlerta(false)}
-                />
-                <div className={style.login_fundo}>
-                    <div className={style.login_container}>
+                tipo={tipoAlerta}
+                mensagem={mensagemAlerta}
+                visivel={mostrarAlerta}
+                aoFechar={() => setMostrarAlerta(false)}
+            />
+            <div className={style.totalRecuperarSenha}>
+                <div className={style.modal_containerRecuperarSenha}>
+                    <div className={style.cabecalhoModalRecuperarSenha}>
                         <h2>Recuperar senha</h2>
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            if (!colocarCodigo) {
-                                EnviarEmail();
-                            } else {
-                                EnviarCodigo();
-                            }
-                        }}>
+                    </div>
+                    <form onSubmit={(e) => {
+                        e.preventDefault();
+                        if (!colocarCodigo) {
+                            EnviarEmail();
+                        } else {
+                            EnviarCodigo();
+                        }
+                    }} className={style.formularioRecuperarSenha}>
+                        <div className={style.grupoFormularioRecuperarSenha}>
                             {colocarCodigo ? (
                                 <input
                                     type="text"
@@ -108,56 +110,59 @@ export function RecuperarSenha() {
                                     onChange={(e) => setCodigo(e.target.value)}
                                 />
                             ) : (
+
                                 <input
                                     type="email"
                                     placeholder="Email"
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
+
                             )}
+                        </div>
+                        <div className={style.rodapeModalRecuperarSenha}>
+                            <button type="submit" className={style.botaoSalvarRecuperarSenha}>Enviar</button>
+                        </div>
+                    </form>
+                </div>
 
-                            <button type="submit" className={style.botao_recuperarsenha}>Enviar</button>
-                        </form>
-                    </div>
+                {isModalOpen && (
+                    <div className={style.overlayModalSenha}>
+                        <div className={style.modal_containerSenha}>
+                            <div className={style.cabecalhoModalSenha}>
+                                <h2>Alterar Senha</h2>
+                                <button className={style.botaoFecharSenha} onClick={fecharModal}>
+                                    &times;
+                                </button>
+                            </div>
+                            <form onSubmit={AlterarSenha}>
+                                <div className={style.grupoFormularioSenha}>
 
-                    {isModalOpen && (
-                        <div className={style.overlayModalSenha}>
-                            <div className={style.modal_containerSenha}>
-                                <div className={style.cabecalhoModalSenha}>
-                                    <h2>Alterar Senha</h2>
-                                    <button className={style.botaoFecharSenha} onClick={fecharModal}>
-                                        &times;
+                                    <input
+                                        type="password"
+                                        value={senha}
+                                        onChange={(e) => setSenha(e.target.value)}
+                                        placeholder="Digite a nova senha"
+                                        required
+                                    />
+                                </div>
+                                <div className={style.rodapeModalSenha}>
+                                    <button
+                                        type="button"
+                                        className={style.botaoCancelarSenha}
+                                        onClick={fecharModal}
+                                    >
+                                        Cancelar
+                                    </button>
+                                    <button type="submit" className={style.botaoSalvarSenha}>
+                                        Salvar
                                     </button>
                                 </div>
-                                <form onSubmit={AlterarSenha}>
-                                    <div className={style.grupoFormularioSenha}>
-                                        <label>Nova senha</label>
-                                        <input
-                                            type="password"
-                                            value={senha}
-                                            onChange={(e) => setSenha(e.target.value)}
-                                            placeholder="Digite a nova senha"
-                                            required
-                                        />
-                                    </div>
-                                    <div className={style.rodapeModalSenha}>
-                                        <button
-                                            type="button"
-                                            className={style.botaoCancelarSenha}
-                                            onClick={fecharModal}
-                                        >
-                                            Cancelar
-                                        </button>
-                                        <button type="submit" className={style.botaoSalvarSenha}>
-                                            Salvar
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
+                            </form>
                         </div>
-                    )}
-                </div>
-            </TopbarLogo>
-        </div>
+                    </div>
+                )}
+            </div>
+        </TopbarLogo>
     );
 }

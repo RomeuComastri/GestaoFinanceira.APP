@@ -32,7 +32,7 @@ export function Cadastro() {
                 setMensagemAlerta(`Usuário cadastrado com sucesso!`);
                 setTipoAlerta('success');
                 exibirAlerta(true);
-                navigate('/login'); 
+                navigate('/login');
             } catch (error) {
                 setMensagemAlerta(`Erro ao cadastrar usuário: ${error.response.data}`);
                 setTipoAlerta('danger');
@@ -49,19 +49,20 @@ export function Cadastro() {
 
 
     return (
-        <div className={style.login_total}>
-            <TopbarLogo>
-                <Alerta
-                    tipo={tipoAlerta}
-                    mensagem={mensagemAlerta}
-                    visivel={mostrarAlerta}
-                    aoFechar={() => setMostrarAlerta(false)}
-                />
-                <div className={style.login_fundo}>
-
-                    <div className={style.login_container}>
+        <TopbarLogo>
+            <Alerta
+                tipo={tipoAlerta}
+                mensagem={mensagemAlerta}
+                visivel={mostrarAlerta}
+                aoFechar={() => setMostrarAlerta(false)}
+            />
+            <div className={style.totalCadastro}>
+                <div className={style.modal_containerCadastro}>
+                    <div className={style.cabecalhoModalCadastro}>
                         <h2>Cadastro</h2>
-                        <form onSubmit={handleSubmit}>
+                    </div>
+                    <form onSubmit={handleSubmit}className={style.formularioCadastro}>
+                        <div className={style.grupoFormularioCadastro}>
                             <input
                                 type="nome"
                                 placeholder="Nome"
@@ -69,7 +70,8 @@ export function Cadastro() {
                                 onChange={(e) => setNome(e.target.value)}
                                 required
                             />
-
+                        </div>
+                        <div className={style.grupoFormularioCadastro}>
                             <input
                                 type="email"
                                 placeholder="Email"
@@ -77,6 +79,8 @@ export function Cadastro() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 required
                             />
+                        </div>
+                        <div className={style.grupoFormularioCadastro}>
                             <input
                                 type="password"
                                 placeholder="Senha"
@@ -84,17 +88,19 @@ export function Cadastro() {
                                 onChange={(e) => setSenha(e.target.value)}
                                 required
                             />
-                            <button type='submit' className={style.botao_cadastro}>Cadastrar</button>
-                            <div className={style.login_senha}>
-                                <p>
-                                    Já possui conta?{" "}
-                                    <Link className={style.login_link} to="/login">Login</Link>
-                                </p>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+                        <div className={style.rodapeModalCadastro}>
+                            <button type='submit' className={style.botaoSalvarCadastro}>Cadastrar</button>
+                        </div>
+                        <div className={style.Cadastro_senha}>
+                            <p>
+                                Já possui conta?{" "}
+                                <Link className={style.Cadastro_link} to="/login">Login</Link>
+                            </p>
+                        </div>
+                    </form>
                 </div>
-            </TopbarLogo>
-        </div>
+            </div >
+        </TopbarLogo >
     );
 }

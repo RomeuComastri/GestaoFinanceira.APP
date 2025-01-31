@@ -113,9 +113,8 @@ const ModalEditarTransacao = ({ visivel, fecharModal, atualizarTransacoes, atual
                         &times;
                     </button>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className={style.formularioEditarTransacao}>
                     <div className={style.grupoFormularioEditar}>
-                        <label>Valor</label>
                         <input
                             type="number"
                             name="valor"
@@ -126,7 +125,6 @@ const ModalEditarTransacao = ({ visivel, fecharModal, atualizarTransacoes, atual
                         />
                     </div>
                     <div className={style.grupoFormularioEditar}>
-                        <label>Descrição</label>
                         <input
                             type="text"
                             name="descricao"
@@ -137,7 +135,6 @@ const ModalEditarTransacao = ({ visivel, fecharModal, atualizarTransacoes, atual
                         />
                     </div>
                     <div className={style.grupoFormularioEditar}>
-                        <label>Data</label>
                         <input
                             type="date"
                             name="data"
@@ -147,7 +144,6 @@ const ModalEditarTransacao = ({ visivel, fecharModal, atualizarTransacoes, atual
                         />
                     </div>
                     <div className={style.grupoFormularioEditar}>
-                        <label>Categoria</label>
                         <select
                             name="categoriaId"
                             value={transacao.categoriaId}

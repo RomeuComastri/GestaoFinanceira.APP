@@ -1,46 +1,96 @@
-.login_fundo{
-    height: 85vh;
+.totalCadastro {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-.login_container {
-    width: 25%;
+.modal_containerCadastro {
+    width: 30%;
+    margin-top: 11%;
     background-color: #545454;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     border-radius: 15px;
     color: white;
     box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
+    gap: 5px;
 }
 
-form {
+.cabecalhoModalCadastro {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    height: 70px;
+    justify-content: center;
+}
+
+.grupoFormularioCadastro {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 85%;
+    gap: 3px;
 }
 
-form input{
-    padding: 10px;
+.cabecalhoModalCadastro h2 {
+    margin-top: 10px;
+    font-size: 28px;
+}
+
+.formularioCadastro {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px
+}
+
+
+.grupoFormularioCadastro input,
+.grupoFormularioCadastro select {
+padding: 7px;
     border-radius: 10px;
     border: none;
     background-color: #f1f1f1;
     outline: none;
+    color: #545454;
+    font-size: 15px;
 }
 
-h2{
-    margin-bottom: 40px;
+.botaoFecharCadastro {
+    width: 7%;
+    height: 6%;
+    font-size: 30px;
+    color: #f1f1f1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s ease-in-out;
 }
 
-.botao_cadastro{
-    background-color: #00a455;
+.botaoFecharCadastro:hover {
+    color: #373737;
+    transform: scale(1.1);
+}
+
+.rodapeModalCadastro {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 35px;
+    margin-top: 15px;
+    gap: 15px;
+    padding-bottom: 20px;
+}
+
+.botaoSalvarCadastro {
+    background-color: #00a455;
+    text-decoration: none;
+    width: 100%;
+    height: 36px;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
     color: #f1f1f1;
     transition: background-color 0.3s ease;
@@ -48,36 +98,59 @@ h2{
     border: none;
     font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.5;
+    font-size: 16px;
     cursor: pointer;
-    margin-bottom: 30px;
+    outline: none;
 }
 
-.botao_cadastro:hover{
+.botaoSalvarCadastro:hover {
     background-color: #006d38;
     transform: scale(1.1);
 }
 
-img {
-    width: 40%;
+.Cadastro_senha{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
 
-.login_senha{
-   font-size: 12px;
-   text-align: center;
-}
-
-.login_link{
-    text-decoration: none;
+.Cadastro_link{
     color: #00a455;
+    text-decoration: none;
     transition: 0.3s;
+    
 }
 
-.login_link:hover{
+.Cadastro_link:hover{
     color: #006d38;
 }
 
-@media screen and (max-width: 1000px) {
-    .login_container{
+
+@media screen and (max-width: 980px) {
+    body {
+        overflow: auto;
+    }
+
+    .modal_containerCadastro {
         width: 80%;
+        margin-top: 50%;
+    }
+
+    .totalCadastro {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 7%;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 570px) {
+        .botaoCancelarCadastro {
+            height: 4.5vh;
+        }
+
+        .botaoSalvarCadastro {
+            height: 4.5vh;
+        }
     }
 }

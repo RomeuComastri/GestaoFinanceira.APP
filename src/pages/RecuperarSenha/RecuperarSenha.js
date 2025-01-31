@@ -61,7 +61,9 @@ export function RecuperarSenha() {
             setMensagemAlerta(`Senha alterada sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
-            navigate('/login');
+            setTimeout(() => {
+                navigate('/login');
+            }, 1000);
         } catch (error) {
             console.error("Erro ao alterar senha:", error);
             setMensagemAlerta(`Erro ao alterar senha: ${error.response.data}`);
@@ -135,7 +137,7 @@ export function RecuperarSenha() {
                                     &times;
                                 </button>
                             </div>
-                            <form onSubmit={AlterarSenha}>
+                            <form onSubmit={AlterarSenha} className={style.formularioRecuperarSenha}>
                                 <div className={style.grupoFormularioSenha}>
 
                                     <input

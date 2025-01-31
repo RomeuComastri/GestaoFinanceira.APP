@@ -20,11 +20,13 @@ const ModalDeletarCategoria = ({ visivel, fecharModal, categoriaId, atualizarCat
     const handleDeletar = async () => {
         try {
             await CategoriaApi.deletarCategoriaAsync(categoriaId)
-            fecharModal();
-            atualizarCategorias();
             setMensagemAlerta(`Categoria deletada com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
+            setTimeout(() => {
+                fecharModal();
+                atualizarCategorias();
+            }, 1000);
         } catch (error) {
             setMensagemAlerta(`Erro ao deletar categoria: ${error.response.data}`);
             setTipoAlerta('danger');

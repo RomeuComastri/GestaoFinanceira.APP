@@ -83,12 +83,14 @@ const ModalEditarTransacao = ({ visivel, fecharModal, atualizarTransacoes, atual
                 transacao.data,
                 transacao.categoriaId
             );
-            fecharModal();
-            atualizarTransacoes();
-            atualizarSaldo();
             setMensagemAlerta(`Transação atualizada com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
+            setTimeout(() => {
+                fecharModal();
+                atualizarTransacoes();
+                atualizarSaldo();
+            }, 1000);
         } catch (error) {
             setMensagemAlerta(`Erro ao atualizar transação: ${error.response.data}`);
             setTipoAlerta('danger');

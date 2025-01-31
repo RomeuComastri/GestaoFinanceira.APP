@@ -33,7 +33,6 @@ const ModalEditarCategoria = ({ visivel, fecharModal, atualizarCategorias, categ
                         nome: dadosCategoria.nome
                     });
                 } catch (error) {
-                    console.error('Erro ao buscar dados da categoria:');
                     setMensagemAlerta(`Erro ao buscar dados da categoria: ${error.response.data}`);
                     setTipoAlerta('danger');
                     exibirAlerta(true);
@@ -57,11 +56,13 @@ const ModalEditarCategoria = ({ visivel, fecharModal, atualizarCategorias, categ
                 categoria.nome
             );
 
-            fecharModal();
-            atualizarCategorias();
             setMensagemAlerta(`Categoria  atualizada com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
+            setTimeout(() => {
+                fecharModal();
+                atualizarCategorias();
+            }, 1000);
         } catch (error) {
             setMensagemAlerta(`Erro ao atualizar categoria: ${error.response.data}`);
             setTipoAlerta('danger');

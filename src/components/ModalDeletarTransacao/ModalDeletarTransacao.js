@@ -20,12 +20,14 @@ const ModalDeletarTransacao = ({ visivel, fecharModal, transacaoId, atualizarTra
     const handleDeletar = async () => {
         try {
             await TransacaoApi.deletarTransacaoAsync(transacaoId);
-            fecharModal();
-            atualizarTransacoes();
-            atualizarSaldo();
             setMensagemAlerta(`Transação deletada com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
+            setTimeout(() => {
+                fecharModal();
+                atualizarTransacoes();
+                atualizarSaldo();
+            }, 1000);
         } catch (error) {
             setMensagemAlerta(`Erro ao deletar transação: ${error.response.data}`);
             setTipoAlerta('danger');

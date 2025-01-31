@@ -59,18 +59,20 @@ const ModalAdicionarTransacao = ({ visivel, fecharModal, tipoTransacao, usuarioI
                 transacao.data,
                 transacao.categoriaId
             );
-            fecharModal();
-            atualizarTransacoes();
-            atualizarSaldo();
             setMensagemAlerta(`Transação adicionada com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
-            
+            setTimeout(() => {
+                fecharModal();
+                atualizarTransacoes();
+                atualizarSaldo();
+            }, 1000);
+
         } catch (error) {
             setMensagemAlerta(`Erro ao adicionar transação: ${error.response.data}`);
             setTipoAlerta('danger');
             exibirAlerta(true);
-            
+
         }
     };
 

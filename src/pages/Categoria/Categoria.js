@@ -51,9 +51,7 @@ export function Categoria() {
             const categoriasOrdenadas = listaCategorias.sort((a, b) => b.id - a.id);
             setCategorias(categoriasOrdenadas);
         } catch (error) {
-            setMensagemAlerta(`Erro ao carregar categorias`);
-            setTipoAlerta('danger');
-            exibirAlerta(true);
+            console.error("Erro ao carregar categorias");
         }
     };
 

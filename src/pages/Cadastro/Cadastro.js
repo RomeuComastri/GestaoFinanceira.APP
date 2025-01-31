@@ -32,7 +32,9 @@ export function Cadastro() {
                 setMensagemAlerta(`Usuário cadastrado com sucesso!`);
                 setTipoAlerta('success');
                 exibirAlerta(true);
-                navigate('/login');
+                setTimeout(() => {
+                    navigate('/login');
+                }, 1000);
             } catch (error) {
                 setMensagemAlerta(`Erro ao cadastrar usuário: ${error.response.data}`);
                 setTipoAlerta('danger');
@@ -61,7 +63,7 @@ export function Cadastro() {
                     <div className={style.cabecalhoModalCadastro}>
                         <h2>Cadastro</h2>
                     </div>
-                    <form onSubmit={handleSubmit}className={style.formularioCadastro}>
+                    <form onSubmit={handleSubmit} className={style.formularioCadastro}>
                         <div className={style.grupoFormularioCadastro}>
                             <input
                                 type="nome"

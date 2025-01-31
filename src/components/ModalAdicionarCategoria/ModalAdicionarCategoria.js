@@ -53,11 +53,13 @@ const ModalAdicionarCategoria = ({ visivel, fecharModal, usuarioId, atualizarCat
                 categoria.nome,
                 categoria.usuarioId
             );
-            fecharModal();
-            atualizarCategorias();
             setMensagemAlerta(`Categoria adicionada com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
+            setTimeout(() => {
+                fecharModal();
+                atualizarCategorias();
+            }, 1000);
         } catch (error) {
             setMensagemAlerta(`Erro ao adicionar categoria: ${error.response.data}`);
             setTipoAlerta('danger');

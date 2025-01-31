@@ -30,7 +30,9 @@ export function Login() {
             setMensagemAlerta(`Login efetuado com sucesso!`);
             setTipoAlerta('success');
             exibirAlerta(true);
-            navigate('/transacao');
+            setTimeout(() => {
+                navigate('/transacao');
+            }, 1000);
 
         } catch (error) {
             setMensagemAlerta(`Erro ao efetuar login: ${error.response.data}`);

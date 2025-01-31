@@ -109,9 +109,7 @@ export function Transacao() {
             );
             setTransacoesFiltradas(listaTranscoes);
         } catch (error) {
-            setMensagemAlerta(`Erro ao carregar transações`);
-            setTipoAlerta('danger');
-            exibirAlerta(true);
+            console.error("Erro ao carregar transações");
         }
     };
 
@@ -121,9 +119,7 @@ export function Transacao() {
             const categoriasOrdenadas = listaCategorias.sort((a, b) => b.id - a.id);
             setCategorias(categoriasOrdenadas);
         } catch (error) {
-            setMensagemAlerta(`Erro ao carregar categorias`);
-            setTipoAlerta('danger');
-            exibirAlerta(true);
+            console.error("Erro ao carregar categorias");
         }
     };
 

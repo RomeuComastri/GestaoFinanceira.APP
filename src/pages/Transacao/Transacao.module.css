@@ -11,12 +11,13 @@ body {
     justify-content: space-between;
     margin-left: 2%;
     margin-top: 2%;
+    /* Fundo semi-transparente */
 }
 
 .container_tabela {
     width: 100%;
     height: auto;
-    max-height: 560px;
+    max-height: 80vh;
     overflow-y: auto;
     border: none;
     border-radius: 10px;
@@ -120,6 +121,7 @@ td {
 
 .filtro {
     width: 32%;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     gap: 15px;

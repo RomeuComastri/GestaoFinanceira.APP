@@ -80,7 +80,7 @@ export function Login() {
                             <div className={style.login_EsqueceuSenha}>
                                 <p>
                                     Esqueceu sua senha?{" "}
-                                    <Link className={style.login_link} to="/recuperarsenha">Clique aqui</Link>
+                                    <Link className={style.login_link} to="/recuperarsenha">Recuperar senha</Link>
                                 </p>
                             </div> 
                             <div className={style.rodapeModalLoginUsuario}>
@@ -89,7 +89,7 @@ export function Login() {
                              <div className={style.login_senha}>
                                 <p>
                                     Não possui conta?{" "}
-                                    <Link className={style.login_link} to="/cadastro">Cadastre-se</Link>
+                                    <Link className={style.login_link} to="/cadastro">Cadastrar</Link>
                                 </p>
                             </div> 
                         </form>

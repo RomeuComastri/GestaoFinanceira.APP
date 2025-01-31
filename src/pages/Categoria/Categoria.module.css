@@ -38,11 +38,11 @@ body {
     color: #f1f1f1;
     transition: background-color 0.3s ease;
     transition: transform 0.3s ease-in-out;
-    font-weight: 800;
-    font-family: sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 15px;
     cursor: pointer;
     outline: none;
-    font-size: 14px;
     box-shadow: 4px 4px 6px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -60,7 +60,7 @@ body {
 .container_tabelaCategoria {
     width: 100%;
     height: auto;
-    max-height: 445px;
+    max-height: 63vh;
     margin-top: 2%;
     overflow-y: auto;
     border: none;

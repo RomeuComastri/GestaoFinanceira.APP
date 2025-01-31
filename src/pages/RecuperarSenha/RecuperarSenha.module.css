@@ -246,12 +246,21 @@
 }
 
 @media screen and (max-width: 1000px) {
-    .login_container {
-        width: 80%;
+    body {
+        overflow: auto;
     }
 
-    .modal_containerSenha {
-        width: 60%;
+    .modal_containerRecuperarSenha {
+        width: 80%;
+        margin-top: 50%;
+    }
+
+    .totalRecuperarSenha {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 7%;
+        align-items: center;
     }
 
     @media screen and (max-width: 570px) {

@@ -50,7 +50,7 @@ export function Transacao() {
         e.preventDefault();
         carregarTransacoesFiltradas();
         obterSaldoTotalAsync();
-        fecharModalFiltrar();
+        setIsModalFiltroOpen(false);
     };
 
     const handleClickFiltrar = () => {
@@ -59,6 +59,13 @@ export function Transacao() {
 
     const fecharModalFiltrar = () => {
         setIsModalFiltroOpen(false);
+        setFiltro({
+            usuarioId: usuarioId,
+            tipo: "",
+            categoriaId: "",
+            dataInicio: "",
+            dataFim: ""
+        });
     };
 
     const handleClickDeletar = (transacao) => {
@@ -270,7 +277,7 @@ export function Transacao() {
                                     &times;
                                 </button>
                             </div>
-                            <form onSubmit={handleSubmitFiltro}className={style.formularioFiltrarTrancao}>
+                            <form onSubmit={handleSubmitFiltro} className={style.formularioFiltrarTrancao}>
                                 <div className={style.grupoFormularioFiltrarTrancao}>
                                     <label>Tipo</label>
                                     <select

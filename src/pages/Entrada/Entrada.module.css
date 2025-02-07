@@ -16,6 +16,9 @@ body{
 .entrada_content{
     width: 40%;
     text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .entrada_content h2{

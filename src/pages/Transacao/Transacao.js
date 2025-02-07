@@ -170,9 +170,6 @@ export function Transacao() {
             />
             <div className={style.container_principal}>
                 <div className={style.filtro}>
-                    <div className={style.filtro_saldototal}>
-                        Saldo: R$ {saldoObtido?.saldoTotal?.toFixed(2) || '0.00'}
-                    </div>
                     <div>
                         <button onClick={handleClickFiltrar} className={style.filtro_tabela}>
                             <div className={style.fraseFiltro}>
@@ -182,6 +179,20 @@ export function Transacao() {
                                 <GoFilter />
                             </div>
                         </button>
+                    </div>
+                    <div>
+                        <div className={style.filtro_saldototal}>
+                            Valor total: R$ {saldoObtido?.saldoTotal?.toFixed(2) || '0.00'}
+                        </div>
+                    </div>
+                    <div className={style.filtroSaldos}>
+                        
+                        <div className={style.filtro_saldototal}>
+                            Receita: R$ {saldoObtido?.totalReceitas?.toFixed(2) || '0.00'}
+                        </div>
+                        <div className={style.filtro_saldototal}>
+                            Despesa: R$ {saldoObtido?.totalDespesas?.toFixed(2) || '0.00'}
+                        </div>
                     </div>
                     <div className={style.botoes}>
                         <button onClick={handleClickNovaReceita} className={style.filtro_botaoreceita}>

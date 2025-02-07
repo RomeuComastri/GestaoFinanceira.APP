@@ -1,5 +1,5 @@
 body {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .containerPrincipalTabela {
@@ -146,6 +146,10 @@ td {
     margin-top: 40px;
 }
 
+.filtroSaldos{
+    display: flex;
+    gap: 10px;
+}
 .botoes {
     display: flex;
     justify-content: space-between;

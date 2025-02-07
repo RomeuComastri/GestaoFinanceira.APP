@@ -26,7 +26,7 @@ const PieChart = ({ totalReceitas, totalDespesas }) => {
             stroke="none"    
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+               <Cell key={`cell-${index}`}  fill={COLORS[index % COLORS.length]}/>
             ))}
           </Pie>
           <Tooltip />

@@ -1,6 +1,7 @@
 import style from './TopbarPrincipal.module.css';
-import Logo from '../../assets/logo.png';
+import LogoFinPlanner from '../../assets/Logo-FinPlanner.png';
 import { MdLogout } from 'react-icons/md';
+import { MdEdit } from 'react-icons/md';
 import { FaCircleUser } from "react-icons/fa6";
 import { Link } from 'react-router-dom';
 import UsuarioApi from "../../services/UsuarioApi";
@@ -73,7 +74,7 @@ export function TopbarPrincipal({ children }) {
         <div>
             <div className={style.topbar_conteudo}>
                 <div className={style.topbar_logo}>
-                    <img src={Logo} alt='Logo' />
+                    <img src={LogoFinPlanner} alt='Logo FinPlanner' />
                 </div>
                 <div className={style.rotas}>
                     <div className={style.acessar}>
@@ -106,18 +107,20 @@ export function TopbarPrincipal({ children }) {
                                 <hr />
                                 <p>{usuario.email}</p>
                                 <hr />
-                                <div className={style.editarLink}>
-                                <Link to='/usuario/editar' state={usuario.id} className={style.botao_editar}>
-                                    Editar Perfil
-                                </Link>
+                                <div className={style.acoesModalUsuario}>
+                                    <div className={style.editarLink}>
+                                        <Link to='/usuario/editar' state={usuario.id} className={style.botao_editar}>
+                                            <MdEdit/> <div>Editar Perfil</div>
+                                        </Link>
+                                    </div>
+                                    <div className={style.acessarDeslogar}>
+                                        <Link to='/login' className={style.botao_deslogar} onClick={Sair}>
+                                            <MdLogout /> Sair
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
                         )}
-                    </div>
-                    <div className={style.acessarDeslogar}>
-                        <Link to='/login' className={style.botao_deslogar} onClick={Sair}>
-                            <MdLogout />
-                        </Link>
                     </div>
                 </div>
             </div>
